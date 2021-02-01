@@ -1,0 +1,28 @@
+.navigate {
+    position: fixed;
+    margin-top: 0px;
+    width: 100%;
+    
+    background-color: blue;
+    padding: 20px;
+}
+
+nav {
+    
+}
+
+.navigate:hover a{
+    background-color: rgb(243, 245, 245);
+    color: chartreuse;
+}
+
+p {
+    background-color: cyan;
+    color: darkolivegreen;
+    margin-top: 70px;
+}
+
+.my-form {
+    display: block;
+    border: 2px solid blue;
+}

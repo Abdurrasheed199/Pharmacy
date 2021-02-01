@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+
+
+</head>
+<body>
+<h1>Drug Details</h1>
+
+
+           <!-- <div class="card">
+
+                <div class="text-center font-weight-normal">
+                    <table class="table table-hover table-dark">
+                        <tr>
+                            <th>
+                                Details
+                            </th>
+                        </tr>
+
+
+                        &lt;!&ndash;<tr>
+                            <td>DRUG NAME</td>
+                            <td th:text="${drug.getName()}"></td>
+                        </tr>
+&ndash;&gt;
+
+                        <tr>
+                            <td>DRUG NAME</td>
+                            <td th:text="${drug.getName()}"></td>
+                        </tr>
+                        <tr>
+                            <td>DRUG PRICE</td>
+                            <td th:text="${drug.getPrice()}"></td>
+                        </tr>
+
+                        <tr>
+                            <td>CATEGORY</td>
+                            <td th:text="${categories}"></td>
+                        </tr>
+
+                    </table>
+                    <div><a th:href="@{/}">Go Back to Home Page</a></div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</main>-->
+
+
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" th:src="'images/' + @{drug.getUrl()}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="text-center font-weight-normal">
+                <table class="table table-hover table-dark">
+                    <tr>
+                        <th>
+                            Details
+                        </th>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>DRUG NAME</td>
+                        <td th:text="${drug.getName()}"></td>
+                    </tr>
+                    <tr>
+                        <td>DRUG PRICE</td>
+                        <td th:text="${drug.getPrice()}"></td>
+                    </tr>
+
+                    <tr>
+                        <td>CATEGORY</td>
+                        <td th:text="${categories}"></td>
+                    </tr>
+
+                </table>
+                <div><a th:href="@{/}">Go Back to Home Page</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+<script th:src="@{/jquery/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+
+</body>
+
+</html>
+

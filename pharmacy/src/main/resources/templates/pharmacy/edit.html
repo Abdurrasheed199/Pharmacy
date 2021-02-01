@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+
+</head>
+
+<body>
+
+<div class="col-sm-5 justify-content-center m-auto border border-bottom">
+
+    <form action="#" th:object="${branches}" th:action="${'/pharmacies/update'}"  method="post">
+
+        <input type="hidden"  th:field="*{id}" name="id">
+
+        <strong>Edit Pharmacy</strong>
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" class="form-control" placeholder="name" name="name" th:field="*{name}" readonly/>
+        </div>
+
+        <div class="form-group">
+            <label>Address:</label>
+            <input type="text" class="form-control" placeholder="address" name="address" th:field="*{address}"/>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number:</label>
+            <input type="number" placeholder="phoneNumber" class="form-control" name="phoneNumber" th:field="*{phoneNumber}"/>
+        </div>
+
+<!--
+
+        <div class="form-group">
+            <label>Registration Number:</label>
+            <input type="text" class="form-control" placeholder="registrationNumber" name="registrationNumber" th:field="*{registrationNumber}"/>
+        </div>
+-->
+
+        <!--<div class="form-group">
+            <label>Drug:</label>
+            <input type="text" class="form-control" placeholder="drug" name="drug" th:field="*{drug}"/>
+        </div>
+-->
+
+        <button class="btn btn-lg btn-primary " type="submit">Edit Pharmacy</button>
+    </form>
+</div>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/jquery/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+</body>
+</html>

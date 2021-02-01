@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+
+
+</head>
+<body>
+    <h1>Patient List</h1>
+    <table class ="table table-dark">
+        <thead>
+        <tr>
+
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row : *{patients}">
+            <td th:text="${row.getId()}"></td>
+            <td th:text="${row.getFirstName()}"></td>
+            <td th:text="${row.getLastName()}"></td>
+            <td th:text="${row.getGender()}"></td>
+            <td th:text="${row.getAddress()}"></td>
+            <td th:text="${row.getPhone()}"></td>
+            <td><a th:href="@{/patients/edit/{id}(id=${row.getId()})}"><button class="btn-warning" name="button">Edit</button></a></td>
+            <td><a th:href="@{/patients/delete/{id}(id=${row.getId()})}"><button class="btn-danger" name="button">Delete</button></a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
